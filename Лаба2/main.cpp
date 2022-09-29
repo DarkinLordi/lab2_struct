@@ -33,7 +33,13 @@ int main()
 		}
 		if (choose == 2)
 		{
-
+			if (count >= 1)
+			{
+				printf("Введите номер участника(всего их %d): ", count);
+				int a;
+				scanf("%d", &a);
+				men[a - 1] = redact(men[a-1]);
+			}
 		}
 		if (choose == 3)
 		{
@@ -58,9 +64,10 @@ int main()
 				{
 					system("cls");
 					printf("Введите номер участника(всего их %d): ", count);
-					int a = input_choose() - 1;
+					int a;
+					scanf("%d", &a);
 					if (a >= 1 && a <= count)
-						output(men[a]);
+						output(men[a-1]);
 					else
 						printf("Вы ввели несуществующего участника\n");
 					break;

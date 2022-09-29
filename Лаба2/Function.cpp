@@ -63,3 +63,35 @@ void outputav(struct Athletes men)
 		printf("Отсутствует усредненный результат\n");
 	printf("---------------------------------------------------------------------------------------------\n");
 }
+
+Athletes redact(struct Athletes men)
+{
+	system("cls");
+	printf("Выберите что редактировать:\n1)ФИО\n2)Забег\n3)Прыжки\n4)Плаванье\n");
+	switch (input_choose())
+	{
+	case 1:
+	{
+		men.fio = InitFIO();
+		break;
+	}
+	case 2:
+	{
+		men.res_run = InitRun();
+		break;
+	}
+	case 3:
+	{
+		men.res_jump = InitJump();
+		break;
+	}
+	case 4:
+	{
+		men.res_swim = InitSwim();
+		break;
+	}
+	default:
+		break;
+	}
+	return men;
+}
