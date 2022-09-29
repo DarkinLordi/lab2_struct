@@ -18,7 +18,7 @@ Swim InitSwim()
 	if (l == 1)
 	{
 		result.count = 1;
-		printf("¬ведите врем€ плавань€(секунды): ");
+		printf("¬ведите макс. скорость плавань€(секунды): ");
 		scanf("%d", &result.result); while (getchar() != '\n');
 	}
 	else
@@ -28,7 +28,7 @@ Swim InitSwim()
 		result.result = new int[l];
 		for (int k = 0; k < l; k++)
 		{
-			printf("¬ведите врем€ %d-го плавань€(секунды): ", k + 1);
+			printf("¬ведите макс. скорость %d-го плавань€(секунды): ", k + 1);
 			scanf("%d", &result.result[k]); while (getchar() != '\n');
 			sum = sum + result.result[k];
 		}

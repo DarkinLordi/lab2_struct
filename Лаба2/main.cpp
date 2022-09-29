@@ -18,7 +18,7 @@ int main()
 	do
 	{
 		system("cls");
-		printf("Выберите действие\n1)Ввод спортсменов\n2)Изменение записей\n3)\n4)Вывод результатов\n");
+		printf("Выберите действие\n1)Ввод спортсменов\n2)Изменение записей\n3)Получении статистики участника\n4)Вывод результатов\n");
 		printf("Введите 0 для выходa\n");
 		choose = input_choose();
 		if (choose == 1)
@@ -38,12 +38,25 @@ int main()
 				printf("Введите номер участника(всего их %d): ", count);
 				int a;
 				scanf("%d", &a);
-				men[a - 1] = redact(men[a-1]);
+				if (a >= 1 && a <= count)
+					men[a - 1] = redact(men[a - 1]);
+				else
+					printf("Участника с таким номером нет!");
 			}
 		}
 		if (choose == 3)
 		{
+			if (count >= 1)
+			{
+				printf("Введите номер участника(всего их %d): ", count);
+				int a;
+				scanf("%d", &a);
+				if (a >= 1 && a <= count)
+					statistics(men[a - 1]);
+				else
+					printf("Участника с таким номером нет!");
 
+			}
 		}
 		if (choose == 4)
 		{

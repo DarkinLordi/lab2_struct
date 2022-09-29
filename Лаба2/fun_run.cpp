@@ -17,7 +17,7 @@ Run InitRun()
 	if (l == 1)
 	{
 		result.count = 1;
-		printf("¬ведите врем€ забега(секунды): ");
+		printf("¬ведите макс. скорость забега: ");
 		scanf("%d", &result.result); while (getchar() != '\n');
 	}
 	else
@@ -27,7 +27,7 @@ Run InitRun()
 		result.result = new int[l];
 		for (int k = 0; k < l; k++)
 		{
-			printf("¬ведите врем€ %d-го забега(секунды): ", k + 1);
+			printf("¬ведите макс. скорость %d-го забега(секунды): ", k + 1);
 			scanf("%d", &result.result[k]); while (getchar() != '\n');
 			sum = sum + result.result[k];
 		}
