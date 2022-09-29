@@ -45,22 +45,27 @@ int main()
 		{
 			if (count >= 1)
 			{
+				system("cls");
 				printf("Выберите формат вывода:\n1)Вывести результаты полностью\n2)Вывести одного участника\n3)Вывести усредненные результаты\n");
 				switch (input_choose())
 				{
 				case 1:
 				{
+					system("cls");
 					for (int i = 0; i < count; i++)
 						output(men[i]);
+					break;
 				}
 				case 2:
 				{
+					system("cls");
 					printf("Введите номер участника(всего их %d): ", count);
-					int a = input_choose();
+					int a = input_choose() - 1;
 					if (a >= 1 && a <= count)
 						output(men[a]);
 					else
 						printf("Вы ввели несуществующего участника\n");
+					break;
 				}
 				default:
 					break;

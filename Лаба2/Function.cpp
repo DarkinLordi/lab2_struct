@@ -15,7 +15,6 @@ int input_choose()
 
 void output(struct Athletes men)
 {
-	system("cls");
 	cout << "ФИО участника: " + men.fio.firstname + " " + men.fio.middlename + " " + men.fio.lastname << endl;
 	cout << "Дата: " + men.res_run.data + "|| Дисциплина - бег, результаты:" << endl;
 	for (int i = 0; i < men.res_run.count; i++)
