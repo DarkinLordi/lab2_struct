@@ -40,5 +40,26 @@ void output(struct Athletes men)
 		else
 			printf("Забег: %d\n", men.res_swim.result);
 	}
-	printf("---------------------------------------------------------------------------------------------");
+	printf("---------------------------------------------------------------------------------------------\n");
+}
+
+void outputav(struct Athletes men)
+{
+	cout << "ФИО участника: " + men.fio.firstname + " " + men.fio.middlename + " " + men.fio.lastname << endl;
+	cout << "Дата: " + men.res_run.data + "|| Дисциплина - бег, результат:" << endl;
+	if (men.res_run.count != 1)
+		printf("%.2lf\n", men.res_run.average);
+	else
+		printf("Отсутствует усредненный результат\n");
+	cout << "Дата: " + men.res_jump.data + "|| Дисциплина - прыжки, результат:" << endl;
+	if (men.res_jump.count != 1)
+		printf("%.2lf\n", men.res_jump.average);
+	else
+		printf("Отсутствует усредненный результат\n");
+	cout << "Дата: " + men.res_swim.data + "|| Дисциплина - плаванье, результат:" << endl;
+	if (men.res_swim.count != 1)
+		printf("%.2lf\n", men.res_swim.average);
+	else
+		printf("Отсутствует усредненный результат\n");
+	printf("---------------------------------------------------------------------------------------------\n");
 }

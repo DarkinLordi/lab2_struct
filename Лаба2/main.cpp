@@ -7,8 +7,6 @@
 #include "st_run.h"
 #include "Athletes.h"
 
-Athletes InitAthletes();
-
 Athletes* men;
 
 int main()
@@ -65,6 +63,13 @@ int main()
 						output(men[a]);
 					else
 						printf("Вы ввели несуществующего участника\n");
+					break;
+				}
+				case 3:
+				{
+					system("cls");
+					for (int i = 0; i < count; i++)
+						outputav(men[i]);
 					break;
 				}
 				default:
