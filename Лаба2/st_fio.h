@@ -9,3 +9,5 @@ struct FIO
 	string middlename;
 	string lastname;
 };
+
+FIO InitFIO();

@@ -10,3 +10,5 @@ struct Jump
 	double average;
 	string data;
 };
+
+Jump InitJump();

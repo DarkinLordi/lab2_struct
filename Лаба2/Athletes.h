@@ -17,3 +17,4 @@ struct Athletes
 };
 
 Athletes InitAthletesMen();
+Athletes InitAthletes();

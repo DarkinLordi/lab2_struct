@@ -8,5 +8,4 @@ struct Run
 	string data;
 };
 
-Run RunInitTest();
-Run RunInitMen();
+Run InitRun();

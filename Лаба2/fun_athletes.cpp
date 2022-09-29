@@ -5,9 +5,18 @@
 #include <iostream>
 #include <string>
 
+Athletes InitAthletes()
+{
+	Athletes null;
+	return null;
+}
+
 Athletes InitAthletesMen()
 {
 	Athletes men;
-	men.res_run = RunInitMen();
+	men.fio = InitFIO();
+	men.res_run = InitRun();
+	men.res_swim = InitSwim();
+	men.res_jump = InitJump();
 	return men;
 }
