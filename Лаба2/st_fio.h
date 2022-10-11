@@ -10,4 +10,7 @@ struct FIO
 	string lastname;
 };
 
-FIO InitFIO();
+FIO InitFIO(string a, string b, string c);
+FIO InputFIO();
+void OutFIO(FIO a);
+FIO RedFIO(FIO a);

@@ -11,4 +11,8 @@ struct Swim
 	string data;
 };
 
-Swim InitSwim();
+Swim InitSwim(string d, int c, int r[5], int n, double a);
+Swim InputSwim();
+void OutSwim(Swim a);
+Swim RedSwim(Swim a);
+void ResSwim(Swim a);

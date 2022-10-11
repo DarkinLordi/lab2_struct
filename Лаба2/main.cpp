@@ -18,7 +18,7 @@ int main()
 	do
 	{
 		system("cls");
-		printf("Выберите действие\n1)Ввод спортсменов\n2)Изменение записей\n3)Получении статистики участника\n4)Вывод результатов\n");
+		printf("Выберите действие\n1)Ввод спортсменов\n2)Вывод результатов\n3)Редактирование\n4)Результаты\n");
 		printf("Введите 0 для выходa\n");
 		choose = input_choose();
 		if (choose == 1)
@@ -33,72 +33,19 @@ int main()
 		}
 		if (choose == 2)
 		{
-			if (count >= 1)
-			{
-				printf("Введите номер участника(всего их %d): ", count);
-				int a;
-				scanf("%d", &a);
-				if (a >= 1 && a <= count)
-					men[a - 1] = redact(men[a - 1]);
-				else
-					printf("Участника с таким номером нет!");
-			}
+			for (int i = 0; i < count; i++)
+				OutAthletes(men[i]);
 		}
 		if (choose == 3)
 		{
-			if (count >= 1)
-			{
-				printf("Введите номер участника(всего их %d): ", count);
-				int a;
-				scanf("%d", &a);
-				if (a >= 1 && a <= count)
-					statistics(men[a - 1]);
-				else
-					printf("Участника с таким номером нет!");
-
-			}
+			printf("Введите номер участника: ");
+			int j;
+			scanf("%d", &j);
+			men[j - 1] = RedAthletes(men[j - 1]);
 		}
 		if (choose == 4)
-		{
-			if (count >= 1)
-			{
-				system("cls");
-				printf("Выберите формат вывода:\n1)Вывести результаты полностью\n2)Вывести одного участника\n3)Вывести усредненные результаты\n");
-				switch (input_choose())
-				{
-				case 1:
-				{
-					system("cls");
-					for (int i = 0; i < count; i++)
-						output(men[i]);
-					break;
-				}
-				case 2:
-				{
-					system("cls");
-					printf("Введите номер участника(всего их %d): ", count);
-					int a;
-					scanf("%d", &a);
-					if (a >= 1 && a <= count)
-						output(men[a-1]);
-					else
-						printf("Вы ввели несуществующего участника\n");
-					break;
-				}
-				case 3:
-				{
-					system("cls");
-					for (int i = 0; i < count; i++)
-						outputav(men[i]);
-					break;
-				}
-				default:
-					break;
-				}
-			}
-			else
-				printf("Вы не ввели участников!\n");
-		}
+			for (int i = 0; i < count; i++)
+				ResAthletes(men[i]);
 		system("pause");
 	} while (choose != 0);
 }

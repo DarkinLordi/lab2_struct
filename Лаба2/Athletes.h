@@ -18,3 +18,6 @@ struct Athletes
 
 Athletes InitAthletesMen();
 Athletes InitAthletes();
+void OutAthletes(Athletes a);
+Athletes RedAthletes(Athletes a);
+void ResAthletes(Athletes a);
